@@ -1,6 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 const About = () => {
+    let [query, setQuery] = useSearchParams();
+    console.log('ddd', query.get('q'));
     return (
         <>
             <main>

@@ -1,6 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const navigate = useNavigate();
+    const goToTheShow = () => {
+        navigate('/about?q=data');
+    };
     return (
         <>
             <main>
@@ -9,6 +13,7 @@ const Home = () => {
             </main>
             <nav>
                 <Link to="/about">About</Link>
+                <button onClick={goToTheShow}>Show</button>
             </nav>
         </>
     );
